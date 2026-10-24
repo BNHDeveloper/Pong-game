@@ -7,7 +7,59 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <main class="game-container">
+    <header class="game-header">
+      <h1>PONG <span>NEON</span></h1>
+      <p class="subtitle">Two players. One ball. No mercy.</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="player-score">
+        <span class="player-label">PLAYER 1</span>
+        <span id="score-left" class="score">0</span>
+      </div>
+
+      <div class="score-divider">:</div>
+
+      <div class="player-score">
+        <span class="player-label">PLAYER 2</span>
+        <span id="score-right" class="score">0</span>
+      </div>
+    </section>
+
+    <section class="arena">
+      <canvas
+        id="game-canvas"
+        width="900"
+        height="520"
+        aria-label="Pong game arena. Player 1 uses W and S. Player 2 uses the up and down arrow keys."
+      ></canvas>
+
+      <div id="overlay" class="overlay">
+        <h2 id="overlay-title">READY?</h2>
+        <p id="overlay-message">First player to 5 points wins.</p>
+        <button id="start-btn" class="primary-btn">START GAME</button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div>
+        <h3>PLAYER 1</h3>
+        <p><kbd>W</kbd> Move up</p>
+        <p><kbd>S</kbd> Move down</p>
+      </div>
+
+      <div>
+        <h3>PLAYER 2</h3>
+        <p><kbd>↑</kbd> Move up</p>
+        <p><kbd>↓</kbd> Move down</p>
+      </div>
+    </section>
+
+    <button id="restart-btn" class="secondary-btn">
+      RESTART MATCH
+    </button>
+  </main>
   <script src="./script.js"></script>
 </body>
 </html>
